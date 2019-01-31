@@ -81,7 +81,8 @@ body {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: var(--second-color);
+    background: #000000;
+    color: #ff9900;
     right: -100%;
     top: 0;
     text-align: center;
@@ -92,6 +93,7 @@ body {
   .menu a {
     display: block;
     padding: 20px;
+    color: #ff9900;
   }
   .hide-menu-btn {
     position: absolute;
@@ -154,6 +156,7 @@ body {
   background: white;
   box-shadow: 0 0 10px rgba(194, 130, 70, 0.7);
   display: grid;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   place-items: center;
   padding: 30px;
@@ -184,7 +187,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  padding: 40px 0;
 }
 
 .text-about {
@@ -216,7 +218,6 @@ body {
 /* APARTMENT INDEX PAGE */
 
 #apartment {
-  padding: 40px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #fff;
@@ -337,6 +338,7 @@ footer {
   display: grid;
   border-top: 2px solid white;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "copyr logo info"
 }
 
 footer p {
@@ -359,11 +361,13 @@ footer li {
 }
 
 .left-footer {
+  grid-area: copyr;
   text-align: start;
   text-transform: uppercase;
 }
 
 .central-footer {
+  grid-area: logo;
   text-align: center;
 }
 
@@ -381,6 +385,7 @@ footer li {
 
 .right__footer {
   text-align: end;
+  grid-area: info;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
@@ -402,7 +407,6 @@ footer li {
   display: inline-block;
   border-radius: 50%;
   color: #000000;
-  border: 2px solid #000000;
   padding: 20px;
   width: 20px;
   height: 20px;
@@ -412,7 +416,6 @@ footer li {
   background: #ff9900;
   color: #f1f1f1;
   transition: 0.5s;
-  border: 2px solid #ff9900;
 }
 
 
@@ -421,8 +424,31 @@ footer li {
 }
 
 @media screen and (max-width: 640px) {
-  .item__social__footer, .central-footer {
-    visibility: hidden;
-    position: absolute;
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "logo"
+        "info"
+        "copyr";
+    place-items: center;
+  }
+  .header-right h1 {
+    font-size: 3rem;
+  }
+  .content-about, #apartment {
+    padding: 0;
+  }
+  .content-index .header-right {
+    padding: 0;
+  }
+  .item__social__footer, .powered-by {
+    text-align: center;
+  }
+  .right__footer {
+    text-align: center;
+  }
+  footer li {
+    text-indent: 0;
   }
 }
