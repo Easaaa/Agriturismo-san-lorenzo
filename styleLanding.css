@@ -109,4 +109,7 @@ a:hover {
   #landing-header {
     padding-top: 5vh;
   }
+  #landing-header h1 {
+    font-size: 3rem;
+  }
 }
