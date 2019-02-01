@@ -384,20 +384,20 @@ body {
   padding-bottom: 30px;
 }
 
-.index-hSeason a, .index-lSeason a {
-text-decoration: none;
-background-color: #ff9900;
-color: white;
-cursor: pointer;
-display: inline-block;
-height: 2.85em;
-line-height: 2.95em;
-margin-top: 10px;
-padding: 0 1.5em;
-white-space: nowrap;
-overflow: hidden;
-text-transform: uppercase;
-font-size: 0.9rem;
+.index-hSeason a, .index-lSeason a, #prices a, .table a {
+   text-decoration: none;
+   background-color: #ff9900;
+   color: white;
+   cursor: pointer;
+   display: inline-block;
+   height: 2.85em;
+   line-height: 2.95em;
+   margin-top: 15px;
+   padding: 0 1.5em;
+   white-space: nowrap;
+   overflow: hidden;
+   text-transform: uppercase;
+   font-size: 0.9rem;
 }
 
 .index-hSeason img, .index-lSeason img {
@@ -427,57 +427,40 @@ font-size: 0.9rem;
 
 
 .pricing-table {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  margin-bottom: 150px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 150px;
   text-align: center;
-  flex-wrap: wrap;
 }
 
-.pricing-table .col {
-  flex: 25%;
-  padding: 10px;
-  max-width: 320px;
-  box-sizing: border-box;
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 80px;
+  height: 463px;
 }
 
 .table {
-  background: #f1f1f1;
-  padding: 40px 20px;
+  display: inline-block;
+  background: white;
   font-family: 'Vidaloka', serif;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 10px #ff9900;
+  width: 100%;
 }
 
 .table h2 {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ff9900;
 }
 
 .price {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 80px;
 }
 
 .price span {
   display: block;
-  font-size: 14px;
-}
-
-.table a {
-  text-decoration: none;
+  font-size: 20px;
   color: #ff9900;
-  border: 2px solid #ff9900;
-  display: block;
-  padding: 10px 0;
-  margin: 10px 0;
-  text-transform: uppercase;
-  font-size: 14px;
-  transition: 0.5s linear;
 }
 
 .table a:hover {
@@ -485,18 +468,14 @@ font-size: 0.9rem;
   color: white;
 }
 
-@media screen and (max-width: 980px) {
-  .col {
-    flex: 50%;
-  }
+.img-prices img {
+  width: 100%;
+  overflow-y: hidden;
 }
 
-@media screen and (max-width: 700px) {
-  .col {
-    flex: 100%;
-  }
+.img-prices {
+  background: cover;
 }
-
 
 /* --------------- CONTACTS PAGE ------------------ */
 
@@ -507,16 +486,14 @@ font-size: 0.9rem;
 }
 
 #contacts hr {
-  border: 1px solid #bc913c;
+  border: 1px solid var(--second-color);
 }
 
 .border {
-  width: 600px;
   height: 2px;
-  background: #bc913c;
-  color: #bc913c;
-  margin: 40px auto;
-  border: 1px solid #bc913c !important;
+  background: var(--second-color);
+  color: var(--second-color);
+  border: 1px solid var(--second-color) !important;
 }
 
 .contact-section {
@@ -552,7 +529,7 @@ font-size: 0.9rem;
 }
 
 .contact-form-text:hover {
-  box-shadow: 0 0 10px 4px #bc913c;
+  box-shadow: 0 0 10px 4px var(--second-color);
 }
 
 textarea.contact-form-text {
@@ -561,9 +538,9 @@ textarea.contact-form-text {
 }
 
 .contact-form-btn {
-  border: 1px solid #bc913c;
+  border: 1px solid var(--second-color);
   background: #120e2b;
-  color: #bc913c;
+  color: var(--second-color);
   padding: 12px 50px;
   border-radius: 20px;
   cursor: pointer;
@@ -571,7 +548,7 @@ textarea.contact-form-text {
 }
 
 .contact-form-btn:hover {
-  background: #bc913c;
+  background: var(--second-color);
   color: #120e2b;
 }
 
@@ -635,7 +612,7 @@ textarea.contact-form-text {
   margin: 10px;
   border-radius: 30%;
   box-shadow: 0 5px 15px -5px #00000070;
-  color: #bc913c;
+  color: var(--second-color);
   overflow: hidden;
   position: relative;
 }
@@ -656,7 +633,7 @@ textarea.contact-form-text {
   position: absolute;
   width: 120%;
   height: 120%;
-  background: #bc913c;
+  background: var(--second-color);
   transform: rotate(45deg);
   left: -110%;
   top: 90%;
@@ -682,7 +659,7 @@ textarea.contact-form-text {
 }
 
 iframe {
-  box-shadow: 2px 2px 10px #bc913c;
+  box-shadow: 2px 2px 10px var(--second-color);
   width: 100%;
   margin-top: 50px;
 }
@@ -738,11 +715,11 @@ iframe {
 }
 
 #agriturismo span {
-  color: #bc913c;
+  color: var(--second-color);
 }
 
 .img__agriturismo img {
-  box-shadow: 2px 2px 10px #bc913c;
+  box-shadow: 2px 2px 10px var(--second-color);
   max-width: 300px;
   border-radius: 50%;
   margin: 0 auto;
