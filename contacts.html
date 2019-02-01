@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="style.css"> 
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet"> 
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <title>Agriturismo San Lorenzo</title>
 </head>
 <body>
@@ -33,49 +32,48 @@
 
 
 
-  <section id='contacts'>
-      <div class='container text-center'>
-        <h2>Benvenuti nella sezione contatti</h2>
-        <p>Compila il modulo, indicando esattamente le date di arrivo e partenza da te gradite, specificando la tipologia di alloggio preferita (vedi pagina camere). Grazie.</p>
-      </div>
-      <div class='contact-section'>
+    <div id='prices'>
+          <img src="images/flower.png" alt="">
+          <h2>Benvenuto </br>nella sezione contatti</h2>
+          <p>Compilate il modulo, indicando esattamente le date di arrivo e partenza da voi gradite, specificando la tipologia di alloggio preferita (vedi pagina appartamenti). Grazie.</p>
+       </div>
+      <div id="contact-form">
          <form class='contact-form' action="contactForm.php" method='post'>
             <input type="text" name="name" placeholder='Il tuo nome e cognome' class='contact-form-text'>
             <input type="email" name="email" placeholder='La tua email' class='contact-form-text'>
             <input type="text" name="phoneNumber" placeholder='Il tuo numero di telefono' class='contact-form-text'>
-            <input type="text" name="roomView" placeholder='Tipo di camera gradita' class='contact-form-text'>
+            <input type="text" name="roomView" placeholder='Tipo di appartamento gradito' class='contact-form-text'>
             <textarea name="text" placeholder='Scrivi qui la tua richiesta' class='contact-form-text'></textarea>
             <input type="submit" name="submit" class='contact-form-btn' value="Invia">
          </form>
       </div>
-    </section>
     
-    <section id='info-contacts'>
+      <section id='info-contacts'>
         <h2>Contatti</h2>
         <div class="address">
             <div class='info-contact'>
                  <i class="fas fa-phone-square"></i>
-                 <h5>Hotel Vittoria</h5> 
-                 <p>0365 641320</p>
+                 <h5>Direttore Tononi Luca</h5> 
+                 <p>+39 329 3103384</p>
             </div>
             <div class='info-contact'>
-                 <i class="fas fa-mobile-alt"></i>
-                 <h5>Direttore Sig. Tononi Luca</h5>
-                 <p>+39 329 3103384</p>
+              <i class="fas fa-envelope"></i>
+                 <h5>Email</h5>
+                 <p>info@sanlorenzodipersegno.it</p>
             </div>
             <div class="info-contact">
             <i class="fas fa-map-marker-alt"></i></br>
             Toscolano Maderno (BS)</br>
-            Via benamati 118</br>
-            Lago di Garda</br>
+            Via Camerate 39</br>
+            Parco Alto Garda Bresciano</br>
             </div>
             <div class="info-contact">
             <div class="item__social__contact">
-              <a class='social-btn' target="_blank" href="https://www.facebook.com/LaVittoriadiMaderno/"><i class="fab fa-facebook-f"></i>
+              <a class='social-btn' target="_blank" href="https://www.facebook.com/AgriturismoSanLorenzoDiPersegno/"><i class="fab fa-facebook-f"></i>
               </a>
-              <a class='social-btn' target="_blank" href="https://www.google.com/maps/place/Hotel+Vittoria/@45.638064,10.6006863,17z/data=!3m1!4b1!4m7!3m6!1s0x0:0xdfe1e097a1faebc6!5m1!1s2018-04-16!8m2!3d45.638064!4d10.602875?hl=it&shorturl=1"><i class="fab fa-google"></i>
+              <a class='social-btn' target="_blank" href="https://www.google.com/maps/place/San+lorenzo+di+persegno/@45.6807574,10.6085484,17z/data=!3m1!4b1!4m8!3m7!1s0x0:0xf56fbd94153af021!5m2!1s2018-05-07!2i2!8m2!3d45.6723671!4d10.6139674?hl=it"><i class="fab fa-google"></i>
               </a>
-              <a class='social-btn' target="_blank" href="https://www.tripadvisor.it/Hotel_Review-g950408-d2557915-Reviews-Hotel_Vittoria-Toscolano_Maderno_Province_of_Brescia_Lombardy.html"><i class="fab fa-tripadvisor"></i>
+              <a class='social-btn' target="_blank" href="https://www.tripadvisor.it/Hotel_Review-g950408-d3251604-Reviews-San_Lorenzo_di_Persegno-Toscolano_Maderno_Province_of_Brescia_Lombardy.html"><i class="fab fa-tripadvisor"></i>
              </a>
            </div>
           </div>
@@ -85,17 +83,17 @@
     
     <section id='map'>
           <h2>Dove siamo</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.635214791765!2d10.600686315563266!3d45.638063979103386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdfe1e097a1faebc6!2sHotel+Vittoria!5e0!3m2!1sit!2sit!4v1545842760573" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.5089498395396!2d10.60854841556473!3d45.68075737910405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf56fbd94153af021!2sSan+lorenzo+di+persegno!5e0!3m2!1sit!2ses!4v1549053317942" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
     
-    <section id='agriturismo'>
-       <div class='text__title__agriturismo'>
-          <h2>Agriturismo San Lorenzo di Persegno</h2>
+    <section id='hotel'>
+       <div class='text__title__hotel'>
+          <h2>Hotel Vittoria</h2>
           <em>La nostra alternativa per gli amanti della montagna</em>
-          <p class='text__desc__agriturismo'><span>Clicca</span> sull’immagine per scoprire la nostra struttura montana. L’agriturismo si trova a 7 km dal paese di Toscolano Maderno. Gli appartamenti sono <span>completamente arredati e forniti di ogni accessorio.</span> Nella struttura è presente un solarium e a un km di distanza si trova un <span>meraviglioso fiume</span> dove poter fare il bagno. </p>
+          <p class='text__desc__hotel'><span>Clicca</span> sull’immagine per scoprire la nostra struttura nel borgo di Toscolano Maderno. L’albergo si trova nel centro storico, nel parco troverete una piscina e il parcheggio privato.</p>
         </div>
-        <div class="img__agriturismo">
-              <a target='_blank' href="https://sanlorenzodipersegno.it/"><img src="images/agriturismo.png" alt="First slide">
+        <div class="img__hotel">
+              <a target='_blank' href="https://vittoriahotel.eu"><img src="images/logoHD.jpeg" alt="First slide">
           </a>
        </div>
     </section>

@@ -195,7 +195,7 @@ body {
   justify-items: end;
 }
 
-.text-about h1, .apart-text h1, #testimonials h1 {
+.text-about h1, .apart-text h1, #testimonials h1, #info-contacts h2, #map h2, #hotel h2 {
   color: var(--second-color);
   font-size: 2rem;
   font-weight: 200;
@@ -477,13 +477,8 @@ body {
 /* --------------- CONTACTS PAGE ------------------ */
 
 
-#contacts {
-  margin-top: 50px;
-  margin-bottom: 75px;
-}
-
-#contacts hr {
-  border: 1px solid var(--second-color);
+#contact-form {
+  margin-bottom: 100px;
 }
 
 .border {
@@ -553,7 +548,7 @@ textarea.contact-form-text {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  background: #19193b;
+  background: white;
 }
 
 #info-contacts h2{
@@ -589,12 +584,11 @@ textarea.contact-form-text {
 
 .info-contact {
   margin-bottom: 20px;
-  transform: translateY(-50%);
 }
 
 .info-contact i {
   font-size: 26px;
-  color: #bc913c;
+  color: #ff9900;
 }
 
 .item__social__contact {
@@ -609,7 +603,7 @@ textarea.contact-form-text {
   margin: 10px;
   border-radius: 30%;
   box-shadow: 0 5px 15px -5px #00000070;
-  color: var(--second-color);
+  color: #ff9900;
   overflow: hidden;
   position: relative;
 }
@@ -622,7 +616,7 @@ textarea.contact-form-text {
 
 .item__social__contact .social-btn:hover i {
   transform: scale(1.3);
-  color: #120e2b;
+  color: white;
 }
 
 .item__social__contact .social-btn::before {
@@ -630,7 +624,7 @@ textarea.contact-form-text {
   position: absolute;
   width: 120%;
   height: 120%;
-  background: var(--second-color);
+  background: #ff9900 ;
   transform: rotate(45deg);
   left: -110%;
   top: 90%;
@@ -672,50 +666,51 @@ iframe {
   text-align: center;
 }
 
-#agriturismo {
+#hotel {
   display: grid;
-  background: #19193b;
+  background: white;
   grid-template-columns: 4fr [text__desc] 2.5fr [logo];
   padding-top: 100px;
   padding-bottom: 100px;
+  border-bottom: 4px solid #ff9900;
 }
 
-.text__title__agriturismo {
+.text__title__hotel {
   display: grid;
   grid-template-rows: auto auto 1fr;
   text-align: end;
   padding: 40px;
 }
 
-#agriturismo h2 {
+#hotel h2 {
   text-align: end;
 }
 
 @media (max-width: 900px) {
-  #agriturismo {
+  #hotel {
     grid-template-columns: 1fr;
     padding-top: 10px;
     padding-bottom: 40px;
     justify-items: center;
   }
-  .text__title__agriturismo {
+  .text__title__hotel {
     text-align: center;
   }
-  #agriturismo h2 {
+  #hotel h2 {
     text-align: center;
   }
 }
 
-#agriturismo em {
+#hotel em {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-#agriturismo span {
+#hotel span {
   color: var(--second-color);
 }
 
-.img__agriturismo img {
+.img__hotel img {
   box-shadow: 2px 2px 10px var(--second-color);
   max-width: 300px;
   border-radius: 50%;
