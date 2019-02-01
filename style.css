@@ -337,10 +337,10 @@ body {
 
 
 
-/* --------------- PRICES ------------------ */
+/* --------------- PRICES INDEX------------------ */
 #prices {
   text-align: center;
-  padding: 40px 0 40px 0;
+  padding: 40px 0 0 0;
 }
 
 #prices h2 {
@@ -350,18 +350,81 @@ body {
   font-family: 'Vidaloka', serif;
   color: #ff9900;
   text-transform: italic;
+  padding-bottom: 1.5em;
 }
 
 #prices p {
   font-size: 1.5rem;
-  padding: 5px 200px 5px 200px;
+  padding: 0.1em 6em 0.1em 6em;
 }
 
-#prices p span {
+#seasons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5em;
+  grid-gap: 100px;
+  text-align: center;
+  place-content: center;
+}
+
+.index-hSeason, .index-lSeason {
+  padding: 70px 20px 70px 20px;
+  background: white;
+}
+
+.index-hSeason h5, .index-lSeason h5 {
   font-weight: 700;
   color: #ff9900;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding-bottom: 30px;
+  text-transform: uppercase;
 }
+
+.index-hSeason p, .index-lSeason p {
+  padding-bottom: 30px;
+}
+
+.index-hSeason a, .index-lSeason a {
+text-decoration: none;
+background-color: #ff9900;
+color: white;
+cursor: pointer;
+display: inline-block;
+height: 2.85em;
+line-height: 2.95em;
+margin-top: 10px;
+padding: 0 1.5em;
+white-space: nowrap;
+overflow: hidden;
+text-transform: uppercase;
+font-size: 0.9rem;
+}
+
+.index-hSeason img, .index-lSeason img {
+  width: 40px;
+}
+
+@media screen and (max-width: 650px) {
+  #seasons {
+    padding: 50px 0 100px 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #prices p {
+    padding: 0.1em 1em 0.1em 1em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #seasons {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------- PRICE SEASON -------------- */
+
+
 
 .pricing-table {
   max-width: 1200px;
