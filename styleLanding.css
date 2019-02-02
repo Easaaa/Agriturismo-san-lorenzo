@@ -87,7 +87,7 @@ animation-delay: 14s;
 opacity: 1;
 }
 
-a {
+/* #landing-header a {
   padding: 20px 40px 20px 40px;
   border: 1px solid white;
   text-decoration: none;
@@ -98,11 +98,20 @@ a {
   letter-spacing: 2.5px;
 }
 
-a:hover {
+#landing-header a:hover {
   background: #ff9900;
   color: white;
   transition: 0.7s;
   font-size: 1.2rem;
+} */
+
+#languages {
+  text-align: center;
+}
+
+#languages .flag {
+  display: inline-block;
+  padding: 10px;
 }
 
 @media screen and (max-width: 800px) {
