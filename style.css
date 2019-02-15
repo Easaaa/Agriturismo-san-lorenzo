@@ -81,9 +81,6 @@ body {
   .show-menu-btn, .hide-menu-btn {
     display: block;
   }
-  .header {
-    height: 70px;
-  }
   .menu {
     position: fixed;
     width: 100%;
