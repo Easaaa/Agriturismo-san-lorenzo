@@ -114,7 +114,7 @@ body {
 .content-index {
   display: grid;
   grid-template-areas: "img text";
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   text-align: center;
   place-content: center;
 } 
@@ -148,9 +148,9 @@ body {
 .content-index .header-left img {
   width: 100%;
   min-width: 300px;
-  background-position: center;
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 /* BANNER SOCIAL */
