@@ -1,3 +1,24 @@
+<?php
+
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $emailFrom = $_POST['email'];
+  $phoneNumber = $_POST['phoneNumber'];
+  $roomView = $_POST['roomView'];
+  $message = $_POST['text'];
+
+  $mailTo = "info@sanlorenzodipersegno.it";
+  $headers = "E-mail da: ".$emailFrom;
+  $txt = "Hai ricevuto un e-mail da ".$name.".\n\n".
+         "Numero di telefono: ".$phoneNumber.".\n\n".
+         "Camera richiesta: ".$roomView.".\n\n".
+         $message;
+
+  mail($mailTo, $headers, $txt);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
-  <title>Agriturismo - Kontakt</title>
+  <title>Agriturismo - Contatti</title>
 </head>
 <body>
   <div class="header">
@@ -21,40 +42,40 @@
     </label>
 
     <ul class="menu">
-        <a href="home.html">Home</a>
-        <a href="apartment.html">Apartments</a>
-        <a href="prices.html">Preise</a>
-        <a href="contacts.html">Kontakt</a>
-        <label for="chk" class="hide-menu-btn">
-            <i class="fas fa-times"></i>
-        </label>
-      </ul>
+      <a href="home.html">Home</a>
+      <a href="apartment.html">Appartamenti</a>
+      <a href="prices.html">Prezzi</a>
+      <a href="contact.php">Contatti</a>
+      <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+      </label>
+    </ul>
   </div>
 
 
 
     <div id='prices'>
           <img src="../images/flower.png" alt="">
-          <h2>Kontakt</h2>
-          <!-- <p>Füllt das Formular bitte genau aus und gebt die An- und Abreise Daten sowie die genaue Zimmerbezeichnung an (siehe Seite “Apartments”). Danke.</p>
+          <h2>Contatti</h2>
+          <p>Compilate il modulo, indicando esattamente le date di arrivo e partenza da voi gradite, specificando la tipologia di alloggio preferita (vedi pagina appartamenti). Grazie.</p>
        </div>
       <div id="contact-form">
-         <form class='contact-form' action="contactForm.php" method='post'>
-            <input type="text" name="name" placeholder='Vor- und Nachname' class='contact-form-text'>
-            <input type="email" name="email" placeholder='Email-Adresse' class='contact-form-text'>
-            <input type="text" name="phoneNumber" placeholder='Telefonnummero' class='contact-form-text'>
-            <input type="text" name="roomView" placeholder='Gewünschtes Apartment' class='contact-form-text'>
-            <textarea name="text" placeholder='Anfragetext' class='contact-form-text'></textarea>
-            <input type="submit" name="submit" class='contact-form-btn' value="Abschicken">
-         </form> -->
+         <form class='contact-form' action="<?php echo $_SERVER['PHP_SELF']; ?>" method='post'>
+            <input type="text" name="name" placeholder='Nome e cognome' class='contact-form-text'>
+            <input type="email" name="email" placeholder='Email' class='contact-form-text'>
+            <input type="text" name="phoneNumber" placeholder='Numero di telefono' class='contact-form-text'>
+            <input type="text" name="roomView" placeholder='Tipo di appartamento gradito' class='contact-form-text'>
+            <textarea name="text" placeholder='Scrivi qui la tua richiesta' class='contact-form-text'></textarea>
+            <input type="submit" name="submit" class='contact-form-btn' value="Invia">
+         </form> 
       </div>
     
       <section id='info-contacts'>
-        <h2>INFORMATIONEN</h2>
+        <h2>INFORMAZIONI</h2>
         <div class="address">
             <div class='info-contact'>
                  <i class="fas fa-phone-square"></i>
-                 <h5>Direktor Tononi Luca</h5> 
+                 <h5>Direttore Tononi Luca</h5> 
                  <p>+39 329 3103384</p>
             </div>
             <div class='info-contact'>
@@ -86,15 +107,15 @@
     </section>
     
     <section id='map'>
-          <h2>WO WIR SIND</h2>
+          <h2>Dove siamo</h2>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.5089498395396!2d10.60854841556473!3d45.68075737910405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf56fbd94153af021!2sSan+lorenzo+di+persegno!5e0!3m2!1sit!2ses!4v1549053317942" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
     
     <section id='hotel'>
        <div class='text__title__hotel'>
           <h2>Hotel Vittoria</h2>
-          <em>Unsere Alternative für die Liebhaber des Sees</em>
-          <p class='text__desc__hotel'><span>Klicke</span> auf das Bild, um mehr über unser Hotel in Toscolano Maderno herauszufinden. Die Anlage befindet sich in der Altstadt und verfügt sowohl über einen Swimmingpool im Garten als auch einen Parkplatz.</p>
+          <em>La nostra alternativa per gli amanti del lago</em>
+          <p class='text__desc__hotel'><span>Clicca</span> sull’immagine per scoprire la nostra struttura nel borgo di Toscolano Maderno. L’albergo si trova nel centro storico, nel parco troverete una piscina e il parcheggio privato.</p>
         </div>
         <div class="img__hotel">
               <a target='_blank' href="https://vittoriahotel.eu"><img src="../images/logoHD.jpeg" alt="First slide">
@@ -124,7 +145,8 @@
               class="fab fa-tripadvisor"></i>
           </a>
         </div>
-        <p class="powered-by">Copyright © 2019 | Created with joy by <a target='_blank' href="https://easaaa.github.io/portfolio1.0/">TON Media & Design</a></p>
+        <p class="powered-by">Copyright © 2019 | Powered by <a target='_blank' href="https://easaaa.github.io/portfolio1.0/">Leonardo
+          Tononi</a></p>
       </div>
 
   <div class="central-footer">

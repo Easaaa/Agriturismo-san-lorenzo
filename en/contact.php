@@ -1,3 +1,24 @@
+<?php
+
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $emailFrom = $_POST['email'];
+  $phoneNumber = $_POST['phoneNumber'];
+  $roomView = $_POST['roomView'];
+  $message = $_POST['text'];
+
+  $mailTo = "info@sanlorenzodipersegno.it";
+  $headers = "E-mail da: ".$emailFrom;
+  $txt = "Hai ricevuto un e-mail da ".$name.".\n\n".
+         "Numero di telefono: ".$phoneNumber.".\n\n".
+         "Camera richiesta: ".$roomView.".\n\n".
+         $message;
+
+  mail($mailTo, $headers, $txt);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +45,7 @@
         <a href="home.html">Home</a>
         <a href="apartment.html">Apartments</a>
         <a href="prices.html">Prices</a>
-        <a href="contacts.html">Contact</a>
+        <a href="contact.php">Contact</a>
         <label for="chk" class="hide-menu-btn">
             <i class="fas fa-times"></i>
         </label>
@@ -36,18 +57,18 @@
     <div id='prices'>
           <img src="../images/flower.png" alt="">
           <h2>Contact</h2>
-          <!-- <p>Fill in the form and indicate your arrival and departure dates. Please specify the kind of accommodation you prefer (see the page “apartments”).
+          <p>Fill in the form and indicate your arrival and departure dates. Please specify the kind of accommodation you prefer (see the page “apartments”).
           </p>
        </div>
       <div id="contact-form">
-         <form class='contact-form' action="contactForm.php" method='post'>
+         <form class='contact-form' action="<?php echo $_SERVER['PHP_SELF']; ?>" method='post'>
             <input type="text" name="name" placeholder='Name and Surname' class='contact-form-text'>
             <input type="email" name="email" placeholder='Email' class='contact-form-text'>
             <input type="text" name="phoneNumber" placeholder='Phone Number' class='contact-form-text'>
             <input type="text" name="roomView" placeholder='Kind of apartment requested' class='contact-form-text'>
             <textarea name="text" placeholder='Write here your request' class='contact-form-text'></textarea>
             <input type="submit" name="submit" class='contact-form-btn' value="Send">
-         </form> -->
+         </form> 
       </div>
     
       <section id='info-contacts'>
