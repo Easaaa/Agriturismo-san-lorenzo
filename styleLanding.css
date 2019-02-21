@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  font-family: 'Vidaloka', serif;
+  font-family: 'EB Garamond', serif;
 }
 
 #landing-header {
@@ -10,21 +10,31 @@ text-align: center;
 padding-top: 15vh;
 }
 
-/* #landing-header h1 {
-color: #fff;
-text-transform: uppercase;
-margin-bottom: 40px;
-font-weight: 300;
-letter-spacing: 5px;
-font-size: 2rem;
-} */
-
 #landing-header h1 {
   font-size: 4rem;
   font-weight: 200;
   text-align: center;
   text-transform: uppercase;
   color: white;
+}
+
+#landing-header img {
+  width: 100%;
+}
+
+@media screen and (min-width: 530px) {
+  #landing-header img {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #landing-header img {
+    width: 40%;
+  }
+  #lamnguages .flag a img {
+    width: 80%;
+  }
 }
 
 .slideshow { 
@@ -111,7 +121,13 @@ opacity: 1;
 
 #languages .flag {
   display: inline-block;
-  padding: 10px;
+  padding: 40px 10px 0 10px;
+}
+
+#languages .flag a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
