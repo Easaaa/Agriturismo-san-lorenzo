@@ -158,7 +158,7 @@ body {
 
 #banner-rate {
   background: white;
-  box-shadow: 0 0 10px rgba(83, 83, 83, 0.7);
+  box-shadow: 0 0 5px rgba(83, 83, 83, 0.3);
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
