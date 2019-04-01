@@ -21,6 +21,21 @@ body {
 
 /* ------------- INDEX PAGE ----------------- */
 
+#closed {
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  background:red;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 800px){
+  #closed {
+    padding: 20px 200px 20px 200px;
+  }
+}
+
 /*  NAVBAR  */
 
 .header {
