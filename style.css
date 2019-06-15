@@ -805,7 +805,7 @@ textarea.contact-form-text {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  background: white;
+  background: whitesmoke;
 }
 
 #info-contacts h2 {
@@ -929,7 +929,7 @@ textarea.contact-form-text {
 
 #hotel {
   display: grid;
-  background: white;
+  background: whitesmoke;
   grid-template-columns: 4fr [text__desc] 2.5fr [logo];
   padding-top: 100px;
   padding-bottom: 100px;
