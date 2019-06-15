@@ -14,8 +14,7 @@
 
 body {
   height: 100%;
-  background: #f1f1f1;
-  /* fallback for old browsers */
+  background: var(--main-txt-color);
   color: var(--main-bg-color)ad;
 }
 
@@ -42,7 +41,6 @@ body {
 .header {
   height: 100px;
   padding: 0 20px;
-  background: white;
 }
 
 .header img {
@@ -62,12 +60,12 @@ body {
   text-decoration: none;
   padding: 0 10px;
   letter-spacing: 1.5px;
-  transition: 0.4s;
+  transition: 0.1s ease-in;
 }
 
 .show-menu-btn,
 .hide-menu-btn {
-  transition: 0.4s;
+  transition: 0.1s ease-in;
   font-size: 30px;
   cursor: pointer;
   display: none;
@@ -85,7 +83,7 @@ body {
 .menu a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover {
-  color: var(--second-color);
+  border-bottom: 4px solid var(--second-color);
 }
 
 #chk {
@@ -99,6 +97,15 @@ body {
   .show-menu-btn,
   .hide-menu-btn {
     display: block;
+  }
+
+  .show-menu-btn i {
+    line-height: 40px;
+    padding-top: 5px;
+  }
+
+  .header {
+    height: 50px;
   }
 
   .menu {
@@ -134,23 +141,16 @@ body {
 
 /* HEADER */
 
-.content-index {
-  display: grid;
-  grid-template-areas: "img text";
-  grid-template-columns: repeat(2, 1fr);
-  text-align: center;
-  place-content: center;
-}
-
 .header-left {
-  grid-area: img;
+  width: 100%;
+  order: 1;
 }
 
 .header-right {
-  grid-area: text;
-  background: white;
   text-transform: uppercase;
+  text-align: center;
   padding: 10px 0;
+  order: 2;
 }
 
 .text-header {
@@ -182,7 +182,7 @@ body {
 
 
 #banner-rate {
-  background: white;
+  background: whitesmoke;
   box-shadow: 0 0 5px rgba(83, 83, 83, 0.3);
   display: grid;
   grid-gap: 20px;
@@ -214,12 +214,6 @@ body {
 
 /* ABOUT */
 
-.content-about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-}
-
 .text-about {
   justify-items: end;
 }
@@ -249,7 +243,6 @@ body {
 
 .content-about img,
 .apart-video img {
-  max-width: 840px;
   width: 100%;
 }
 
@@ -258,12 +251,8 @@ body {
 
 .content-about,
 #apartment {
-  display: grid;
-  grid-template-columns: 1fr;
   padding: 40px 0;
-  background: #fff;
   color: var(--main-bg-color);
-  place-items: center;
 }
 
 .text-about,
@@ -276,12 +265,12 @@ body {
   padding: 20px 30px;
 }
 
-.apart-img:nth-of-type(1) {
-  order: 2;
+.apart-img {
+  order: 1;
 }
 
-.apart-text:nth-of-type(2) {
-  order: 1;
+.apart-text {
+  order: 2;
 }
 
 .apart-img img {
@@ -310,21 +299,21 @@ body {
   background: #da8300;
 }
 
-.content-index {
-  grid-template-areas: "text"
-    "img";
-  grid-template-columns: 1fr;
-}
-
 .content-index .header-right {
-  padding: 100px 0 100px 0;
+  padding: 100px 0;
 }
 
 @media screen and (min-width: 1200px) {
-  #apartment {
+
+  #apartment,
+  .content-about,
+  .content-index {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    place-items: center;
   }
+
+
 }
 
 /* TESTIMONIALS */
@@ -337,7 +326,6 @@ body {
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: 100;
-  color: var(--main-bg-color);
 }
 
 .inner {
@@ -368,8 +356,11 @@ body {
 }
 
 .testimonial {
-  background: white;
   padding: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(80, 80, 80, 0.5);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(80, 80, 80, 0.5);
+  box-shadow: 2px 2px 5px 0px rgba(80, 80, 80, 0.5);
 }
 
 .testimonial img {
@@ -936,12 +927,12 @@ textarea.contact-form-text {
 /* FOOTER */
 
 footer {
+  border-top: 2px solid var(--second-color);
   padding: 10px;
   color: var(--main-bg-color);
   background: white;
   max-height: 400px;
   display: grid;
-  border-top: 2px solid white;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "copyr logo info"
 }
