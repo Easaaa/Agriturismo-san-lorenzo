@@ -668,6 +668,11 @@ body {
   margin-bottom: 60px;
 }
 
+#prices p strong {
+  font-size: 1.2rem;
+  color: var(--second-color);
+}
+
 
 .table {
   background: white;
@@ -708,9 +713,20 @@ body {
   #silence-price,
   #harmony-price,
   #joy-price {
-    padding: 20px 80px 20px 80px;
-    max-width: 700px;
+    padding: 20px 80px;
+    max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+
+  .swap-position1 {
+    order: 1;
+  }
+
+  .swap-position2 {
+    order: 2;
   }
 }
 
@@ -1094,17 +1110,5 @@ footer li {
 
   footer li {
     text-indent: 0;
-  }
-}
-
-@media screen and (min-width: 1350px) {
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .right__footer {
-    padding: 20px;
   }
 }

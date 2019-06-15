@@ -1,0 +1,11 @@
+@media screen and (min-width: 1350px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .right__footer {
+    padding: 20px;
+  }
+}
