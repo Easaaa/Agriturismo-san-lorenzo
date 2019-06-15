@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../style.css"> 
+  <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
   <title>Agriturismo San Lorenzo</title>
+
+  <link rel="stylesheet" type="text/css"
+    href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#000000",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "#ff9900",
+            "text": "#ffffff"
+          }
+        },
+        "theme": "classic",
+        "content": {
+          "message": "Questo sito web usa cookies per assicurarti una migliore esperienza. ",
+          "dismiss": "Ho capito!",
+          "link": "Scopri di più."
+        }
+      })
+    });
+  </script>
 </head>
+
 <body>
   <div class="header">
-    <img src=""" alt="" class="logo"> 
-    
+    <img src=""" alt="" class=" logo">
+
     <input type="checkbox" id="chk">
     <label for="chk" class="show-menu-btn">
       <i class="fas fa-align-right"></i>
@@ -27,169 +56,179 @@
       <a href="prices.html">Prezzi</a>
       <a href="contact.php">Contatti</a>
       <label for="chk" class="hide-menu-btn">
-          <i class="fas fa-times"></i>
+        <i class="fas fa-times"></i>
       </label>
     </ul>
   </div>
 
   <div id="closed">
-      <p><i class="fas fa-exclamation"></i> <br> Siamo veramente spiacenti,<br> ma per lavori sulla strada quest'anno l'Agriturismo dovrà rimanere chiuso, vi aspettiamo per la stagione 2020. <br> Buone vacanze dallo staff.</p>
+    <p><i class="fas fa-exclamation"></i> <br> Quest'anno l'Agriturismo dovrà rimanere chiuso, vi aspettiamo per la
+      prossima stagione (2020). Buone vacanze dallo staff.</p>
   </div>
 
   <div class="content-index">
     <div class="header-left">
-        <img src="../images/header.png" alt="photo agriturismo">
+      <img src="../images/header.png" alt="photo agriturismo">
     </div>
     <div class="header-right">
       <div class="text-header">
-          <img src="../images/flower.png" alt="">
-          <h1>San</br> Lorenzo di </br>Persegno</h1>
-          <h4>Agriturismo</h4>
+        <img src="../images/flower.png" alt="">
+        <h1>San</br> Lorenzo di </br>Persegno</h1>
+        <h4>Agriturismo</h4>
       </div>
     </div>
   </div>
-  
-  
+
+
   <div id="about">
     <div class="content-about">
       <div class="text-about">
-          <h1>La struttura</h1>
-          <div class="border"></div>
-          <p> Benvenuti in Persegno 
-              località immersa nella natura del parco Alto Garda Bresciano, ai piedi del Monte Pizzocolo. L’agriturismo San Lorenzo è sinonimo di tranquillità e divertimento, all’insegna di un’ospitalità che fa sorridere. 
-        </br></br>
-              Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna e offre una terrazza solarium in comune, un parchetto con attrezzi per allenare il corpo all’aria aperta e tanto altro.
+        <h1>La struttura</h1>
+        <div class="border"></div>
+        <p> Benvenuti in Persegno
+          località immersa nella natura del parco Alto Garda Bresciano, ai piedi del Monte Pizzocolo.
+          </br></br>
+          Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda,
+          l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.
         </p>
       </div>
       <div class="img-about">
-          <img src="../images/terrace-logo.png" alt="">
-      </div> 
+        <img src="../images/terrace-logo.png" alt="">
+      </div>
     </div>
   </div>
-  
+
   <div id="apartment">
-    <div class="apart-video">
-        <!-- <iframe width="700" height="500" src="https://www.youtube.com/embed/G70Cav0Ym9g?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-        <img src="../images/index-apart.png" alt="">
+    <div class="apart-img">
+      <img src="../images/index-apart.png" alt="">
     </div>
     <div class="apart-text">
-        <h1>Gli appartamenti</h1>
-        <div class="border"></div>
-        <p> All'interno di 14 ettari di terreno, la struttura fa parte di una vecchia formaggiaia risalente al 1800, le stanze possono accogliere fino a quattro ospiti ciascuna in
-            un' atmosfera calda e raccolta, dallo charme caratteristico e confortevole.</br></br>
-            Gli appartamenti sono spaziosi e ben arredati, forniti di ogni utensile necessario.
-            Proseguendo nella sezione appartamenti troverete anche un bellissimo video per ogni appartamento.
-        <!-- </br></br>
-            <a href="apartments.html">Scopri di più</a> -->
-        </p>
+      <h1>Gli appartamenti</h1>
+      <div class="border"></div>
+      <p> All'interno di 14 ettari di terreno, la struttura fa parte di una vecchia formaggiaia risalente al 1800, le
+        stanze possono accogliere fino a quattro ospiti ciascuna in
+        un' atmosfera calda e raccolta, dallo charme caratteristico e confortevole.</br></br>
+        Gli appartamenti sono spaziosi e ben arredati, forniti di ogni utensile necessario.
+        Proseguendo nella sezione appartamenti troverete anche un bellissimo video per ogni appartamento.
+      </p>
+      <div class="btn-more">
+        <a class="btn-cont" href="apartment.html">Scopri di più</a>
       </div>
+    </div>
   </div>
 
   <div id="banner-rate">
-      <div id="booking">
-       <img src="../images/logo-booking-header.png" alt="">
-          <p>8,8 / 10</p>
-      </div>
-      <div id="google"> 
-          <a target="_blank" href="https://www.google.com/maps/place/San+lorenzo+di+persegno/@45.6807574,10.6085484,17z/data=!3m1!4b1!4m8!3m7!1s0x0:0xf56fbd94153af021!5m2!1s2018-05-07!2i2!8m2!3d45.6723671!4d10.6139674?hl=it">
-              <img src="../images/google-maps-header.png" alt="">
-          </a>
-          <p>4,5 / 5</p>
-      </div>
-      <div id="tripad">
-          <a target="_blank" href="https://www.tripadvisor.it/Hotel_Review-g950408-d3251604-Reviews-San_Lorenzo_di_Persegno-Toscolano_Maderno_Province_of_Brescia_Lombardy.html">
-            <img src="../images/logo-tripadvisor.png" alt="">
-          </a>
-          <p>5 / 5</p>
-      </div> 
+    <div id="booking">
+      <img src="../images/logo-booking-header.png" alt="">
+      <p>8,8 / 10</p>
     </div>
+    <div id="google">
+      <a target="_blank"
+        href="https://www.google.com/maps/place/San+lorenzo+di+persegno/@45.6807574,10.6085484,17z/data=!3m1!4b1!4m8!3m7!1s0x0:0xf56fbd94153af021!5m2!1s2018-05-07!2i2!8m2!3d45.6723671!4d10.6139674?hl=it">
+        <img src="../images/google-maps-header.png" alt="">
+      </a>
+      <p>4,5 / 5</p>
+    </div>
+    <div id="tripad">
+      <a target="_blank"
+        href="https://www.tripadvisor.it/Hotel_Review-g950408-d3251604-Reviews-San_Lorenzo_di_Persegno-Toscolano_Maderno_Province_of_Brescia_Lombardy.html">
+        <img src="../images/logo-tripadvisor.png" alt="">
+      </a>
+      <p>5 / 5</p>
+    </div>
+  </div>
   <div id="testimonials">
-      <div class="inner">
-        <h1>Le recensioni</h1>
-        <div class="border"></div>
+    <div class="inner">
+      <h1>Le recensioni</h1>
+      <div class="border"></div>
 
-        <div class="row">
-          <div class="col">
-            <div class="testimonial">
-              <img src="../images/p1.png" alt="">
-              <div class="name">Giovanni</div>
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-
-              <p>
-                  Ambiente esterno super confortevole e anche interni dell'appartamento. Ambiente informale e familiare e ottimo per i bambini
-              </p>
+      <div class="row">
+        <div class="col">
+          <div class="testimonial">
+            <img src="../images/p1.png" alt="">
+            <div class="name">Giovanni</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
             </div>
+
+            <p>
+              Ambiente esterno super confortevole e anche interni dell'appartamento. Ambiente informale e familiare e
+              ottimo per i bambini
+            </p>
           </div>
+        </div>
 
-          <div class="col">
-            <div class="testimonial">
-              <img src="../images/p2.png" alt="">
-              <div class="name">Fanny</div>
-             <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-
-              <p>
-                  Accueil très sympa par Léo.
-L'endroit est très isolé mais au calme, dans un cadre très chouette.Maison confortable et agréable.
-Avec de jeunes enfants, c'était parfait.
-              </p>
+        <div class="col">
+          <div class="testimonial">
+            <img src="../images/p2.png" alt="">
+            <div class="name">Fanny</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
+
+            <p>
+              Accueil très sympa par Léo.
+              L'endroit est très isolé mais au calme, dans un cadre très chouette.Maison confortable et agréable.
+              Avec de jeunes enfants, c'était parfait.
+            </p>
           </div>
+        </div>
 
-          <div class="col">
-            <div class="testimonial">
-              <img src="../images/p3.png" alt="">
-              <div class="name">Rosa</div>
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-              <p> 
-                  Wir kommen gern wieder!
-                  Freundliche Gastgeberfamilie. Tolle Aussicht,wunderbare Lage der Ferienwohnung.
-              </p>
+        <div class="col">
+          <div class="testimonial">
+            <img src="../images/p3.png" alt="">
+            <div class="name">Rosa</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
+
+            <p>
+              Wir kommen gern wieder!
+              Freundliche Gastgeberfamilie. Tolle Aussicht,wunderbare Lage der Ferienwohnung.
+            </p>
           </div>
         </div>
       </div>
     </div>
-    
-  
+  </div>
+
+
 
   <footer>
-      <div class="left-footer">
-          <div class="item__social__footer">
-            <a target="_blank" class='social-btn' href="https://www.facebook.com/AgriturismoSanLorenzoDiPersegno/"><i class="fab fa-facebook-f"></i>
-            </a>
-            <a target="_blank" class='social-btn' href="https://www.google.com/maps/place/San+lorenzo+di+persegno/@45.6807574,10.6085484,17z/data=!3m1!4b1!4m8!3m7!1s0x0:0xf56fbd94153af021!5m2!1s2018-05-07!2i2!8m2!3d45.6723671!4d10.6139674?hl=it"><i
-                class="fab fa-google"></i>
-            </a>
-            <a target="_blank" class='social-btn' href="https://www.tripadvisor.it/Hotel_Review-g950408-d3251604-Reviews-San_Lorenzo_di_Persegno-Toscolano_Maderno_Province_of_Brescia_Lombardy.html"><i
-                class="fab fa-tripadvisor"></i>
-            </a>
-          </div>
-          <p class="powered-by">Copyright © 2019 | Powered by <a target='_blank' href="https://tonmediadesign.com">TON Media Design</a></p>
-        </div>
+    <div class="left-footer">
+      <div class="item__social__footer">
+        <a target="_blank" class='social-btn' href="https://www.facebook.com/AgriturismoSanLorenzoDiPersegno/"><i
+            class="fab fa-facebook-f"></i>
+        </a>
+        <a target="_blank" class='social-btn'
+          href="https://www.google.com/maps/place/San+lorenzo+di+persegno/@45.6807574,10.6085484,17z/data=!3m1!4b1!4m8!3m7!1s0x0:0xf56fbd94153af021!5m2!1s2018-05-07!2i2!8m2!3d45.6723671!4d10.6139674?hl=it"><i
+            class="fab fa-google"></i>
+        </a>
+        <a target="_blank" class='social-btn'
+          href="https://www.tripadvisor.it/Hotel_Review-g950408-d3251604-Reviews-San_Lorenzo_di_Persegno-Toscolano_Maderno_Province_of_Brescia_Lombardy.html"><i
+            class="fab fa-tripadvisor"></i>
+        </a>
+      </div>
+      <p class="powered-by">Copyright © 2019 | Powered by <a target='_blank' href="https://tonmediadesign.com">TON Media
+          Design</a></p>
+    </div>
 
     <div class="central-footer">
-        <img src="../images/logo.png" alt="photo agriturismo">
+      <img src="../images/logo.png" alt="photo agriturismo">
     </div>
-   
+
     <div class="right__footer">
       <ul class="item__info__footer">
         <li>info@sanlorenzodipersegno.it</li>
@@ -198,6 +237,7 @@ Avec de jeunes enfants, c'était parfait.
       </ul>
     </div>
   </footer>
- 
+
 </body>
+
 </html>

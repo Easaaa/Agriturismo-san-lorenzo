@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: #000000;
+  --main-bg-color: #3c3c3c;
   --main-txt-color: white;
   --second-color: #ff9900;
 }
@@ -14,8 +14,9 @@
 
 body {
   height: 100%;
-  background: #f1f1f1;  /* fallback for old browsers */
-  color: #000000;
+  background: #f1f1f1;
+  /* fallback for old browsers */
+  color: var(--main-bg-color)ad;
 }
 
 
@@ -25,12 +26,12 @@ body {
   font-size: 20px;
   padding: 15px;
   text-align: center;
-  background:red;
+  background: rgba(255, 0, 0, 0.687);
   color: white;
-  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px) {
   #closed {
     padding: 20px 200px 20px 200px;
   }
@@ -44,7 +45,7 @@ body {
   background: white;
 }
 
-.header img{
+.header img {
   line-height: 100px;
   float: left;
   width: 150px;
@@ -56,7 +57,7 @@ body {
 }
 
 .menu a {
-  color: #000000;
+  color: var(--main-bg-color);
   text-transform: uppercase;
   text-decoration: none;
   padding: 0 10px;
@@ -64,7 +65,8 @@ body {
   transition: 0.4s;
 }
 
-.show-menu-btn, .hide-menu-btn {
+.show-menu-btn,
+.hide-menu-btn {
   transition: 0.4s;
   font-size: 30px;
   cursor: pointer;
@@ -80,8 +82,8 @@ body {
   font-size: 30px;
 }
 
-.menu a:hover, 
-.show-menu-btn:hover, 
+.menu a:hover,
+.show-menu-btn:hover,
 .hide-menu-btn:hover {
   color: var(--second-color);
 }
@@ -93,14 +95,17 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .show-menu-btn, .hide-menu-btn {
+
+  .show-menu-btn,
+  .hide-menu-btn {
     display: block;
   }
+
   .menu {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #000000;
+    background: var(--main-bg-color);
     color: #ff9900;
     right: -100%;
     top: 0;
@@ -109,17 +114,20 @@ body {
     line-height: normal;
     transition: 0.7s ease;
   }
+
   .menu a {
     display: block;
     padding: 20px;
     color: #ff9900;
   }
+
   .hide-menu-btn {
     position: absolute;
     top: 40px;
     right: 40px;
   }
-  #chk:checked ~ .menu {
+
+  #chk:checked~.menu {
     right: 0;
   }
 }
@@ -129,10 +137,10 @@ body {
 .content-index {
   display: grid;
   grid-template-areas: "img text";
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
   place-content: center;
-} 
+}
 
 .header-left {
   grid-area: img;
@@ -142,12 +150,17 @@ body {
   grid-area: text;
   background: white;
   text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.text-header {
+  padding: 20px 0;
 }
 
 .header-right h4 {
   font-size: 1.5rem;
   font-weight: 100;
-  color: #000000;
+  color: var(--main-bg-color);
   font-family: 'Vidaloka', serif;
 }
 
@@ -163,9 +176,6 @@ body {
 .content-index .header-left img {
   width: 100%;
   min-width: 300px;
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 /* BANNER SOCIAL */
@@ -214,7 +224,12 @@ body {
   justify-items: end;
 }
 
-.text-about h1, .apart-text h1, #testimonials h1, #info-contacts h2, #map h2, #hotel h2 {
+.text-about h1,
+.apart-text h1,
+#testimonials h1,
+#info-contacts h2,
+#map h2,
+#hotel h2 {
   color: var(--second-color);
   font-size: 2rem;
   font-weight: 200;
@@ -222,15 +237,18 @@ body {
   text-transform: uppercase;
 }
 
-.text-about p, .apart-text p  {
+.text-about p,
+.apart-text p {
   padding: 0 100px 0 100px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   font-weight: 100;
+  color: var(--main-bg-color);
 }
 
-.content-about img, .apart-video img {
+.content-about img,
+.apart-video img {
   max-width: 840px;
   width: 100%;
 }
@@ -238,94 +256,136 @@ body {
 
 /* APARTMENT INDEX PAGE */
 
+.content-about,
 #apartment {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  padding: 40px 0;
   background: #fff;
-  color: #000000;
+  color: var(--main-bg-color);
   place-items: center;
 }
 
-@media screen and (max-width: 1200px) {
-  .content-about, #apartment {
-    grid-template-columns: 1fr;
-    padding: 40px 0;;
-  }
-  .text-about, .apart-text {
-    margin-bottom: 40px;
-  }
-  .text-about p, .apart-text p  {
-    padding: 0 30px 0 30px;
-  }
-  .apart-video:nth-of-type(1) {
-    order: 2;
-  }
-  .apart-text:nth-of-type(2) {
-    order: 1;
-  }
-  .content-about img, .apart-video img {
-    border-radius: 0;
-  }
-  .content-index {
-    grid-template-areas: "text" 
-                         "img";
-    grid-template-columns: 1fr;
-  }
-  .content-index .header-right {
-    padding: 100px 0 100px 0;
+.text-about,
+.apart-text {
+  padding-bottom: 40px;
+}
+
+.text-about p,
+.apart-text p {
+  padding: 20px 30px;
+}
+
+.apart-img:nth-of-type(1) {
+  order: 2;
+}
+
+.apart-text:nth-of-type(2) {
+  order: 1;
+}
+
+.apart-img img {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.btn-more {
+  padding: 20px;
+  text-align: center;
+}
+
+.btn-cont {
+  text-decoration: none;
+  color: var(--main-txt-color);
+  background: var(--second-color);
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 15px 20px;
+  font-size: .8rem;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-cont:hover,
+.btn-cont:active {
+  background: #da8300;
+}
+
+.content-index {
+  grid-template-areas: "text"
+    "img";
+  grid-template-columns: 1fr;
+}
+
+.content-index .header-right {
+  padding: 100px 0 100px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  #apartment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 /* TESTIMONIALS */
 
 
-#testimonials{
+#testimonials {
   padding: 40px 0;
-  color: #000000;
+  color: var(--main-bg-color);
   text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 100;
+  color: var(--main-bg-color);
 }
 
-.inner{
+.inner {
   max-width: 1200px;
   margin: auto;
   overflow: hidden;
   padding: 0 20px;
 }
 
-.border{
+.border {
   width: 160px;
   height: 5px;
   background: #ff9900;
   margin: 26px auto;
 }
 
-.row{
+.row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.col{
+
+.col {
   flex: 33.33%;
   max-width: 33.33%;
   box-sizing: border-box;
   padding: 15px;
 }
-.testimonial{
+
+.testimonial {
   background: white;
   padding: 30px;
 }
-.testimonial img{
+
+.testimonial img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
-.name{
+
+.name {
   font-size: 20px;
   color: #ff9900;
   text-transform: uppercase;
   margin: 20px 0;
 }
-.stars{
+
+.stars {
   color: #ff9900;
   margin-bottom: 20px;
 }
@@ -336,17 +396,17 @@ body {
 
 
 @media screen and (max-width:960px) {
-.col{
-  flex: 100%;
-  max-width: 80%;
-}
+  .col {
+    flex: 100%;
+    max-width: 80%;
+  }
 }
 
 @media screen and (max-width:600px) {
-.col{
-  flex: 100%;
-  max-width: 100%;
-}
+  .col {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 /* --------------- APART PAGE -------------------- */
@@ -373,7 +433,8 @@ body {
   font-weight: 600;
 }
 
-.apart-txt h5, .imp-infos-arrive h2 {
+.apart-txt h5,
+.imp-infos-arrive h2 {
   font-weight: 700;
   color: #ff9900;
   font-size: 1.5rem;
@@ -385,46 +446,46 @@ body {
   text-align: center;
   width: 100%;
   padding-top: 30px;
- }
- 
- .service h3 {
-   font-size: 1rem;
-   font-weight: 100;
-   margin: 10px 10px;
- }
- 
- .service i {
-   color: #ff9900;
-   font-size: 22px;
-   margin-bottom: 15px;
- }
- 
- .cen {
-   max-width: 1200px;
-   margin: auto;
-   padding: 10px;
- }
- 
- .service {
-   display: inline-block;
-   width: calc(100% / 6);
-   margin: 0 -2px;
-   padding: 20px;
-   box-sizing: border-box;
-   transition: 0.4s;
- }
- 
- @media screen and (max-width: 800px) {
-   .service {
-     width: 50%;
-   }
- }
- 
- @media screen and (max-width: 500px) {
-   .service {
-     width: 100%;
-   }
- }
+}
+
+.service h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 10px 10px;
+}
+
+.service i {
+  color: #ff9900;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.cen {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.service {
+  display: inline-block;
+  width: calc(100% / 6);
+  margin: 0 -2px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 800px) {
+  .service {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .service {
+    width: 100%;
+  }
+}
 
 .imp-infos-arrive {
   text-align: center;
@@ -449,12 +510,15 @@ body {
   .video-apart {
     height: 400px;
   }
+
   .imp-infos-arrive {
     margin: 0 auto;
   }
+
   .apart-info {
     padding: 0;
   }
+
   .apart-li {
     visibility: hidden;
     position: absolute;
@@ -497,12 +561,14 @@ body {
   place-content: center;
 }
 
-.index-hSeason, .index-lSeason {
+.index-hSeason,
+.index-lSeason {
   padding: 70px 20px 70px 20px;
   background: white;
 }
 
-.index-hSeason h5, .index-lSeason h5 {
+.index-hSeason h5,
+.index-lSeason h5 {
   font-weight: 700;
   color: #ff9900;
   font-size: 1.2rem;
@@ -510,27 +576,32 @@ body {
   text-transform: uppercase;
 }
 
-.index-hSeason p, .index-lSeason p {
+.index-hSeason p,
+.index-lSeason p {
   padding-bottom: 30px;
 }
 
-.index-hSeason a, .index-lSeason a, #prices a, .table a {
-   text-decoration: none;
-   background-color: #ff9900;
-   color: white;
-   cursor: pointer;
-   display: inline-block;
-   height: 2.85em;
-   line-height: 2.95em;
-   margin-top: 15px;
-   padding: 0 1.5em;
-   white-space: nowrap;
-   overflow: hidden;
-   text-transform: uppercase;
-   font-size: 0.9rem;
+.index-hSeason a,
+.index-lSeason a,
+#prices a,
+.table a {
+  text-decoration: none;
+  background-color: #ff9900;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.85em;
+  line-height: 2.95em;
+  margin-top: 15px;
+  padding: 0 1.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
-.index-hSeason img, .index-lSeason img {
+.index-hSeason img,
+.index-lSeason img {
   width: 40px;
 }
 
@@ -555,7 +626,11 @@ body {
 /* -------------- PRICE SEASON -------------- */
 
 
-#serenity-price, #freedom-price, #silence-price, #harmony-price, #joy-price {
+#serenity-price,
+#freedom-price,
+#silence-price,
+#harmony-price,
+#joy-price {
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
@@ -596,7 +671,12 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  #serenity-price, #freedom-price, #silence-price, #harmony-price, #joy-price {
+
+  #serenity-price,
+  #freedom-price,
+  #silence-price,
+  #harmony-price,
+  #joy-price {
     padding: 20px 80px 20px 80px;
     max-width: 700px;
     margin: 0 auto;
@@ -645,7 +725,7 @@ body {
   background: #ddd;
   padding: 20px 40px;
   outline: none;
-  color: #000000;
+  color: var(--main-bg-color);
   transition: 0.5s;
   border-radius: 15px;
 }
@@ -661,7 +741,7 @@ textarea.contact-form-text {
 
 .contact-form-btn {
   border: 1px solid var(--second-color);
-  background: #000000;
+  background: var(--main-bg-color);
   color: var(--second-color);
   padding: 12px 50px;
   border-radius: 20px;
@@ -681,11 +761,11 @@ textarea.contact-form-text {
   background: white;
 }
 
-#info-contacts h2{
+#info-contacts h2 {
   margin-bottom: 75px;
 }
 
-#info-contacts h5{
+#info-contacts h5 {
   font-weight: 300;
 }
 
@@ -694,21 +774,21 @@ textarea.contact-form-text {
   grid-template-areas: "info info info info";
 }
 
-@media screen and (max-width: 856px){
+@media screen and (max-width: 856px) {
   .address {
-    grid-template-areas: 
-       "info info"
-       "info info";
+    grid-template-areas:
+      "info info"
+      "info info";
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   .address {
-    grid-template-areas: 
-       "info" 
-       "info"
-       "info" 
-       "info";
+    grid-template-areas:
+      "info"
+      "info"
+      "info"
+      "info";
   }
 }
 
@@ -729,10 +809,10 @@ textarea.contact-form-text {
   display: inline-block;
   width: 50px;
   height: 50px;
-  background: whitesmoke; 
+  background: whitesmoke;
   margin: 10px;
   border-radius: 30%;
-  box-shadow: 0 5px 15px -5px #00000070;
+  box-shadow: 0 5px 15px -5px var(--main-bg-color)70;
   color: #ff9900;
   overflow: hidden;
   position: relative;
@@ -754,7 +834,7 @@ textarea.contact-form-text {
   position: absolute;
   width: 120%;
   height: 120%;
-  background: #ff9900 ;
+  background: #ff9900;
   transform: rotate(45deg);
   left: -110%;
   top: 90%;
@@ -767,13 +847,17 @@ textarea.contact-form-text {
 }
 
 @keyframes aaa {
-  0%{
+  0% {
     left: -110%;
     top: 90%;
-  }50%{
+  }
+
+  50% {
     left: 10%;
     top: -30%;
-  }100%{
+  }
+
+  100% {
     left: -10%;
     top: -10%;
   }
@@ -823,9 +907,11 @@ textarea.contact-form-text {
     padding-bottom: 40px;
     justify-items: center;
   }
+
   .text__title__hotel {
     text-align: center;
   }
+
   #hotel h2 {
     text-align: center;
   }
@@ -851,7 +937,7 @@ textarea.contact-form-text {
 
 footer {
   padding: 10px;
-  color: #000000;
+  color: var(--main-bg-color);
   background: white;
   max-height: 400px;
   display: grid;
@@ -865,7 +951,7 @@ footer p {
 }
 
 footer a {
-  color: #000000;
+  color: var(--main-bg-color);
   font-size: 0.8rem;
 }
 
@@ -915,7 +1001,7 @@ footer li {
 }
 
 .item__info__footer i {
-  color: #000000;
+  color: var(--main-bg-color);
 }
 
 .item__social__footer {
@@ -925,7 +1011,7 @@ footer li {
 .item__social__footer .social-btn {
   display: inline-block;
   border-radius: 50%;
-  color: #000000;
+  color: var(--main-bg-color);
   padding: 20px;
   width: 20px;
   height: 20px;
@@ -946,27 +1032,35 @@ footer li {
   footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "logo"
-        "info"
-        "copyr";
+    grid-template-areas:
+      "logo"
+      "info"
+      "copyr";
     place-items: center;
   }
+
   .header-right h1 {
     font-size: 3rem;
   }
-  .content-about, #apartment {
+
+  .content-about,
+  #apartment {
     padding: 0;
   }
+
   .content-index .header-right {
     padding: 0;
   }
-  .item__social__footer, .powered-by {
+
+  .item__social__footer,
+  .powered-by {
     text-align: center;
   }
+
   .right__footer {
     text-align: center;
   }
+
   footer li {
     text-indent: 0;
   }
