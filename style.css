@@ -10,12 +10,12 @@
   font-family: 'EB Garamond', serif;
   font-size: 20px;
   overflow-x: hidden;
-  color: var(--main-bg-color);
 }
 
 body {
   height: 100%;
   background: var(--main-txt-color);
+  color: var(--main-bg-color);
 }
 
 
