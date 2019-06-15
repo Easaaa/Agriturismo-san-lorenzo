@@ -564,8 +564,8 @@ body {
 
 .index-hSeason,
 .index-lSeason {
-  padding: 70px 20px 70px 20px;
-  background: white;
+  padding: 10px 20px;
+  background: whitesmoke;
 }
 
 .index-hSeason h5,
@@ -588,6 +588,7 @@ body {
 .table a {
   text-decoration: none;
   background-color: #ff9900;
+  border-radius: 3px;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -601,9 +602,37 @@ body {
   font-size: 0.9rem;
 }
 
+.index-hSeason a:hover,
+.index-lSeason a:hover,
+#prices a:hover,
+.table a:hover {
+  background-color: #d88200;
+}
+
 .index-hSeason img,
 .index-lSeason img {
   width: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+
+  .index-hSeason,
+  .index-lSeason {
+    margin: 20px 80px;
+  }
+
+  #seasons {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 500px) {
+
+  #seasons {
+    max-width: 1200px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -621,6 +650,7 @@ body {
 @media screen and (max-width: 1200px) {
   #seasons {
     grid-template-columns: 1fr;
+    margin: 20px;
   }
 }
 
@@ -1064,5 +1094,17 @@ footer li {
 
   footer li {
     text-indent: 0;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .right__footer {
+    padding: 20px;
   }
 }
