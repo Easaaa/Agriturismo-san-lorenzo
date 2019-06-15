@@ -10,12 +10,12 @@
   font-family: 'EB Garamond', serif;
   font-size: 20px;
   overflow-x: hidden;
+  color: var(--main-bg-color);
 }
 
 body {
   height: 100%;
   background: var(--main-txt-color);
-  color: var(--main-bg-color)ad;
 }
 
 
@@ -47,6 +47,8 @@ body {
   line-height: 100px;
   float: left;
   width: 150px;
+  top: 5px;
+  position: absolute;
 }
 
 .menu {
@@ -189,7 +191,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   place-items: center;
   padding: 30px;
-  margin: 60px 0 0px 0;
 }
 
 #banner-rate img {
@@ -251,7 +252,6 @@ body {
 
 .content-about,
 #apartment {
-  padding: 40px 0;
   color: var(--main-bg-color);
 }
 
@@ -297,10 +297,6 @@ body {
 .btn-cont:hover,
 .btn-cont:active {
   background: #da8300;
-}
-
-.content-index .header-right {
-  padding: 100px 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -405,7 +401,7 @@ body {
 
 .video-apart {
   max-width: 1000px;
-  height: 700px;
+  height: 600px;
   margin: 0 auto;
   text-align: center;
 }
@@ -416,12 +412,21 @@ body {
   background: white;
 }
 
-.apart-txt {
-  padding: 30px;
+.apart-txt li {
+  font-size: 1.2rem;
+  padding: 20px 30px;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .apart-txt span {
   font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.point {
+  color: var(--second-color);
 }
 
 .apart-txt h5,
@@ -432,6 +437,11 @@ body {
   text-transform: uppercase;
 }
 
+.imp-infos-arrive p {
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 .services {
   text-align: center;
@@ -463,8 +473,21 @@ body {
   margin: 0 -2px;
   padding: 20px;
   box-sizing: border-box;
-  transition: 0.4s;
 }
+
+
+.imp-infos-arrive {
+  text-align: center;
+  padding: 60px 0 100px 0;
+  background: #f1f1f1;
+}
+
+.imp-infos-arrive h5 {
+  color: #ff9900;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1100px) {}
 
 @media screen and (max-width: 800px) {
   .service {
@@ -478,21 +501,9 @@ body {
   }
 }
 
-.imp-infos-arrive {
-  text-align: center;
-  padding: 60px 0 100px 0;
-  background: #f1f1f1;
-  margin: 0 100px 0 100px;
-}
-
-.imp-infos-arrive h5 {
-  color: #ff9900;
-  text-transform: uppercase;
-}
-
 @media screen and (max-width: 1000px) {
   .video-apart iframe {
-    width: 80%;
+    width: 100%;
     height: 80%;
   }
 }
@@ -516,16 +527,15 @@ body {
   }
 }
 
-
-
 /* --------------- PRICES INDEX------------------ */
+
 #prices {
   text-align: center;
-  padding: 40px 0 40px 0;
+  padding: 80px 0 40px 0;
 }
 
 #prices h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 200;
   text-transform: uppercase;
   font-family: 'Vidaloka', serif;
