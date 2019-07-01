@@ -1,5 +1,5 @@
 # Hospitality Web Site
 
 # What i have learned
-• HTML / CSS
-• JavaScirpt
+HTML / CSS
+JavaScirpt
