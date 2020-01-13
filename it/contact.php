@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
     <ul class="menu">
       <a href="home.html">Home</a>
       <a href="apartment.html">Appartamenti</a>
-      <a href="prices.html">Prezzi</a>
+      <a href="new-prices.html">Prezzi</a>
       <a href="contact.php">Contatti</a>
       <label for="chk" class="hide-menu-btn">
         <i class="fas fa-times"></i>
